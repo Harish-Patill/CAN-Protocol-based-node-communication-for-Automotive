@@ -1,15 +1,6 @@
-/*
- * File:   can.c
- * Author: USER
- *
- * Created on October 29, 2026, 10:25 PM
- */
-
-
 /*File for CAN configuration , setting message id's, Data Transmission, */
 #include <xc.h>
 #include "can.h"
-//#include "clcd.h"
 
 /* CAN operation mode values*/
 typedef enum _CanOpMode {
@@ -120,8 +111,7 @@ void can_receive(uint16_t *msg_id, uint8_t *data, uint8_t *len) {
         RXB0FUL = 0; // Clear buffer flag
         RXB0IF = 0; // Clear interrupt flag   
     }
-    else
-    {
+    else{
         // No data available.
         *len = 0;
     }

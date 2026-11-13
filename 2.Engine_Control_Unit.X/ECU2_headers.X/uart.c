@@ -1,16 +1,7 @@
-/*
- * File:   uart.c
- * Author: USER
- *
- * Created on October 29, 2026, 10:27 PM
- */
-
-
 #include <xc.h>
 #include "uart.h"
 
-void init_uart(void)
-{
+void init_uart(void){
 	/* Serial initialization */
 	RX_PIN = 1;
 	TX_PIN = 0;
@@ -55,8 +46,7 @@ void init_uart(void)
 	RCIF = 0;
 }
 
-void putch(unsigned char byte) 
-{
+void putch(unsigned char byte) {
 	/* Output one byte */
 	/* Set when register is empty */
 	while(!TXIF)
@@ -67,29 +57,24 @@ void putch(unsigned char byte)
 	TXREG = byte;
 } 
 
-int puts(const char *s)
-{
-	while(*s)		
-	{
+int puts(const char *s){
+	while(*s){
 		putch(*s++);	
 	}
 	return 0;
 }
 
-unsigned char getch(void)
-{
+unsigned char getch(void){
 	/* Retrieve one byte */
 	/* Set when register is not empty */
-	while(!RCIF)
-	{
+	while(!RCIF){
 		continue;
 	}
 	RCIF = 0;
 	return RCREG;
 }
 
-unsigned char getche(void)
-{
+unsigned char getche(void){
 	unsigned char c;
 
 	putch(c = getch());
