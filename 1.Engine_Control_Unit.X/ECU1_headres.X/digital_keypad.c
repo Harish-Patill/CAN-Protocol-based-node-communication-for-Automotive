@@ -1,38 +1,24 @@
-/*
- * File:   digital_keypad.c
- * Author: USER
- *
- * Created on October 29, 2026, 9:42 PM
- */
-
-
 #include <xc.h>
 #include "digital_keypad.h"
 
-void init_digital_keypad(void)
-{
+void init_digital_keypad(void){
 	TRISC = TRISC | INPUT_PINS;
 }
 
-unsigned char read_digital_keypad(unsigned char detection_type)
-{
+unsigned char read_digital_keypad(unsigned char detection_type){
 	static unsigned char once = 1;
 
-	if (detection_type == STATE_CHANGE)
-	{
-		if (((KEY_PORT & INPUT_PINS) != ALL_RELEASED) && once)
-		{
+	if (detection_type == STATE_CHANGE){
+		if (((KEY_PORT & INPUT_PINS) != ALL_RELEASED) && once){
 			once = 0;
 
 			return (KEY_PORT & INPUT_PINS);
 		}
-		else if ((KEY_PORT & INPUT_PINS) == ALL_RELEASED)
-		{
+		else if ((KEY_PORT & INPUT_PINS) == ALL_RELEASED){
 			once = 1;
 		}
 	}
-	else if (detection_type == LEVEL)
-	{
+	else if (detection_type == LEVEL){
 		return (KEY_PORT & INPUT_PINS);
 	}
 

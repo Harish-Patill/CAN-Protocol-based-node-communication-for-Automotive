@@ -1,10 +1,3 @@
-/* 
- * File:   uart.h
- * Author: USER
- *
- * Created on October 29, 2026, 9:37 PM
- */
-
 #ifndef UART_H
 #define	UART_H
 
@@ -19,4 +12,3 @@ unsigned char getch_with_timeout(unsigned short max_time);
 unsigned char getche(void);
 
 #endif	/* UART_H */
-

@@ -1,10 +1,3 @@
-/* 
- * File:   adc.h
- * Author: USER
- *
- * Created on October 29, 2026, 9:35 PM
- */
-
 #ifndef ADC_H
 #define	ADC_H
 

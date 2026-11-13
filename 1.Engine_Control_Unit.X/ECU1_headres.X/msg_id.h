@@ -1,10 +1,3 @@
-/* 
- * File:   msg_id.h
- * Author: USER
- *
- * Created on October 29, 2026, 9:37 PM
- */
-
 #ifndef MSG_ID_H
 #define	MSG_ID_H
 

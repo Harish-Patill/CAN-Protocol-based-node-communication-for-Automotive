@@ -1,10 +1,3 @@
-/*
- * File:   ecu1_main.c
- * Author: USER
- *
- * Created on October 29, 2026, 9:43 PM
- */
-
 #include <stdint.h>
 //#include <stdlib.h>
 
@@ -14,8 +7,7 @@
 #include "msg_id.h"
 #include "uart.h"
 
-void main()
-{
+void main(){
     //Call the functions
     init_adc();
     init_uart();
@@ -25,8 +17,7 @@ void main()
     //RXB0CONbits.RXM0=1;
     //RXB0CONbits.RXM1=1;
 
-    while(1)
-    {
+    while(1){
         uint16_t speed = get_speed();
 
         puts("speed: ");
@@ -43,7 +34,7 @@ void main()
         putch(gear);
         puts("\n\r");
         
-       // Transmit speed
+        // Transmit speed
         uint8_t speed_data[2];
 
         speed_data[0] = speed & 0xFF;

@@ -9,8 +9,7 @@
 #include <xc.h>
 #include "adc.h"
 
-void init_adc(void)
-{
+void init_adc(void){
 	/* Selecting right justified ADRES Registers order */
 	ADFM = 1;
 
@@ -48,8 +47,7 @@ void init_adc(void)
 	ADON = 1;
 }
 
-unsigned short read_adc(unsigned char channel)
-{
+unsigned short read_adc(unsigned char channel){
 	unsigned short reg_val;
 
 	/*select the channel*/

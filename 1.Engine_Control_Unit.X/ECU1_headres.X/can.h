@@ -1,10 +1,3 @@
-/* 
- * File:   can.h
- * Author: USER
- *
- * Created on October 29, 2026, 9:36 PM
- */
-
 #ifndef CAN_H
 #define	CAN_H
 
@@ -21,8 +14,7 @@
 #define   F_ECANFIFO_6			B4CONbits.RXFUL
 #define   F_ECANFIFO_7			B5CONbits.RXFUL
 
-#define CAN_SET_OPERATION_MODE_NO_WAIT(mode)		\
-{													\
+#define CAN_SET_OPERATION_MODE_NO_WAIT(mode){		\
 	CANCON &= 0x1F;									\
 	CANCON |= mode;									\
 }

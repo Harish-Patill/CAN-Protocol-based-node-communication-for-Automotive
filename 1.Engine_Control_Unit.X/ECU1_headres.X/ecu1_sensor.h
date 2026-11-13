@@ -1,10 +1,3 @@
-/* 
- * File:   ecu1_sensor.h
- * Author: USER
- *
- * Created on October 29, 2026, 9:36 PM
- */
-
 #ifndef ECU1_SENSOR_H
 #define	ECU1_SENSOR_H
 
