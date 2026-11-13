@@ -1,10 +1,3 @@
-/* 
- * File:   can.h
- * Author: USER
- *
- * Created on November 2, 2026, 3:35 PM
- */
-
 #ifndef CAN_H
 #define CAN_H
 

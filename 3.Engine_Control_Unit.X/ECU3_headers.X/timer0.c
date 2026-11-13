@@ -1,11 +1,3 @@
-/*
- * File:   timer0.c
- * Author: USER
- *
- * Created on November 2, 2026, 3:42 PM
- */
-
-
 #include <xc.h>
 #include "timer0.h"
 

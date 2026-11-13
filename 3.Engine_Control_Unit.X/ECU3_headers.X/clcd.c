@@ -1,17 +1,7 @@
-/*
- * File:   clcd.c
- * Author: USER
- *
- * Created on November 2, 2026, 3:40 PM
- */
-
-
-
 #include <xc.h>
 #include "clcd.h"
 
-void clcd_write(unsigned char byte, unsigned char control_bit)
-{
+void clcd_write(unsigned char byte, unsigned char control_bit){
 	CLCD_RS = control_bit;
 	CLCD_PORT = byte;
 
@@ -33,8 +23,7 @@ void clcd_write(unsigned char byte, unsigned char control_bit)
 	PORT_DIR = OUTPUT;
 }
 
-void init_clcd()
-{
+void init_clcd(){
 	/* Set PortD as output port for CLCD data */
 	TRISD = 0x00;
 	/* Set PortC as output port for CLCD control */
@@ -48,17 +37,14 @@ void init_clcd()
 	CLEAR_DISP_SCREEN;
 }
 
-void clcd_print(const unsigned char *data, unsigned char addr)
-{
+void clcd_print(const unsigned char *data, unsigned char addr){
 	clcd_write(addr, INSTRUCTION_COMMAND);
-	while (*data != '\0')
-	{
+	while (*data != '\0'){
 		clcd_write(*data++, DATA_COMMAND);
 	}
 }
 
-void clcd_putch(const unsigned char data, unsigned char addr)
-{
+void clcd_putch(const unsigned char data, unsigned char addr){
 	clcd_write(addr, INSTRUCTION_COMMAND);
 	clcd_write(data, DATA_COMMAND);
 }

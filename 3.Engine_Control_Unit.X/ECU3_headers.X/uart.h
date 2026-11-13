@@ -1,10 +1,3 @@
-/* 
- * File:   uart.h
- * Author: USER
- *
- * Created on November 2, 2026, 3:37 PM
- */
-
 #ifndef UART_H
 #define	UART_H
 

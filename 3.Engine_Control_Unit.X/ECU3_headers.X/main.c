@@ -1,11 +1,3 @@
-/*
- * File:   main.c
- * Author: USER
- *
- * Created on November 2, 2026, 3:41 PM
- */
-
-
 #include <xc.h>
 #include <stdint.h>
 #include "can.h"
@@ -15,8 +7,7 @@
 //#include "isr.h"
 #include "timer0.h"
 
-static void init_leds() 
-{
+static void init_leds(){
     TRISB = 0x08; // Set RB2 as output, RB3 as input, remaining as output
     PORTB = 0x00;
 }
@@ -38,7 +29,7 @@ void main(void) {
     init_config();
 
     /* ECU1 main loop */
-    while (1) {
+    while (1){
         // Read CAN Bus data and handle it
         process_canbus_data();
         

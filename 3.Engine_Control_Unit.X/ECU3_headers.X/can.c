@@ -1,11 +1,3 @@
-/*
- * File:   can.c
- * Author: USER
- *
- * Created on November 2, 2026, 3:40 PM
- */
-
-
 /*File for CAN configuration , setting message id's, Data Transmission, */
 #include <xc.h>
 #include "can.h"
@@ -122,6 +114,4 @@ void can_receive(uint16_t *msg_id, uint8_t *data, uint8_t *len) {
         // No data available.
         *len = 0;
     }
-
-    
 }

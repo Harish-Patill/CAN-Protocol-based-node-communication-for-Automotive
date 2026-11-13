@@ -1,10 +1,3 @@
-/* 
- * File:   clcd.h
- * Author: USER
- *
- * Created on November 2, 2026, 3:36 PM
- */
-
 #ifndef LCD_H
 #define LCD_H
 
